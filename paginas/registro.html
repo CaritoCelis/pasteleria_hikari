@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Pastelería Hikari</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/registro.css">
+    <link rel="stylesheet" href="../estilos/styles.css">
+</head>
+<body>
+        <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/img/logo_8.jpg" alt="Logo Pastelería Hikari" width="120">
+            </div>
+
+            <!-- Botón hamburguesa -->
+            <div class="menu-hamburguesa" id="menu-toggle">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <!-- Menú navegación -->
+            <div class="menu-navegacion">
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/productos.html">Productos</a></li>
+                    <li><a href="/paginas/nosotros.html">Nosotros</a></li>
+                    <li><a href="/paginas/blog.html">Blog</a></li>
+                    <li><a href="/paginas/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Acciones -->
+            <div class="acciones">
+                <a href="/paginas/login.html">Iniciar sesión</a> | 
+                <a href="/paginas/registro.html">Registro</a>
+                <a href="/paginas/carrito.html" aria-label="Carrito de compras">🛒 (0)</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="registro-container">
+        <h1>Registro de Usuario</h1>
+        <form id="form-registro">
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="codigo">Código de descuento (opcional):</label>
+                <input type="text" id="codigo" placeholder="Ej: FELICES50">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p class="nota">🎉 Beneficios: mayores de 50 → 50% descuento, código FELICES50 → 10% de por vida, estudiantes Duoc → torta gratis en cumpleaños.</p>
+    </main>
+
+
+    <!-- FOOTER -->
+    <div>
+    <footer>
+        <div class="footer-links">
+            <p><a href="/index.html">Inicio</a> | <a href="/paginas/productos.html">Productos</a> | 
+            <a href="/paginas/nosotros.html">Nosotros</a></p>
+        </div>
+        <div class="social-icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-youtube"></i>
+        </div>
+        <div class="newsletter">
+            <p>Suscríbete a nuestro boletín:</p>
+            <input type="email" placeholder="Ingresa tu correo">
+            <button>Suscribirse</button>
+        </div>
+        <p>© 2025 Pastelería Hikari - Todos los derechos reservados 🍰</p>
+    </footer>
+    </div>
+    <script src="/JS/registro.JS"></script>
+</body>
+</html>
+
+
+

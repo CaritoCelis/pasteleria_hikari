@@ -1,0 +1,100 @@
+/* ======================
+    Estilos Detalle Blog
+====================== */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main { padding: 20px; }
+
+.detalle-noticia {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #fffafc;
+    border-left: 6px solid #ff7aa8;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.detalle-noticia h2 {
+    color: #e91e63;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#imagenes img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#imagenes img:hover { transform: scale(1.05); }
+
+/* Modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-contenido {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background-color: #ff7aa8;   /* color rosa pastel */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-volver:hover {
+    background-color: #e91e63;   /* rosa más intenso */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}

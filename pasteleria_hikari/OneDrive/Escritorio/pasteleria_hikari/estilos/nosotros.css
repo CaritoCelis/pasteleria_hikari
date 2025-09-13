@@ -1,0 +1,351 @@
+/* ======================
+    Bloque Aniversario
+====================== */
+.bloque-aniversario {
+    background-color: #fffafc; /* Fondo pastel claro */
+    border-left: 6px solid #ff7aa8; /* Barra lateral rosa */
+    border-right: 6px solid #ff7aa8; /* Barra lateral rosa */
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    padding: 50px 20px;
+    max-width: 950px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.bloque-aniversario .banner-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap; /* Se adapta en móviles */
+}
+
+.bloque-aniversario .banner-imagen {
+     width: auto;          /* deja que el ancho se ajuste automáticamente */
+    max-width: 4000px;     /* opcional: controla lo ancho */
+    max-height: 250px;    /* limita la altura vertical */
+    object-fit: cover;    /* recorta la imagen si es necesario manteniendo proporción */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+
+.bloque-aniversario .banner-imagen img {
+    width: 100%;        /* Imagen ocupa todo el espacio de su contenedor */
+    max-width: 1500px;   /* Límite de tamaño */
+    height: auto;       /* Mantiene proporción */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.bloque-aniversario .banner-texto {
+    flex: 2; /* El texto ocupa más espacio que la imagen */
+}
+
+.bloque-aniversario .banner-texto h2 {
+    color: #ff7aa8;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: 'Lato', cursive;
+}
+
+.bloque-aniversario .banner-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6b5b5b;
+    margin: 0 0 20px 0;
+    text-align: left;
+    max-width: 800px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+/* ======================
+    Responsive
+====================== */
+@media (max-width: 768px) {
+    .bloque-aniversario .banner-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bloque-aniversario .banner-texto {
+        flex: 1;
+    }
+
+    .bloque-aniversario .banner-imagen img {
+        width: 150px;
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* =========================
+    SECCIÓN CONÓCENOS
+   ========================= */
+
+/* Encabezado Conócenos */
+.conocenos-header { /* Contenedor de título + logo + badge */
+    display: flex; /* Organiza en fila */
+    align-items: center; /* Alinea verticalmente */
+    gap: 15px; /* Espacio entre elementos */
+    margin: 40px auto 20px; /* Márgenes */
+    max-width: 950px; /* Ancho máximo */
+}
+
+.conocenos-header .logo-placeholder { /* Logo dentro del header */
+    background: #ff7aa8; /* Fondo rosa */
+    color: #fff; /* Texto blanco */
+    font-size: 28px; /* Tamaño de letra */
+    font-weight: bold; /* Negrita */
+    padding: 18px 22px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra ligera */
+    font-family: 'Pacifico', cursive; /* Fuente decorativa */
+}
+
+.conocenos-header h1 { /* Título Conócenos */
+    font-size: 28px; 
+    margin: 0; 
+    color: #3b2f2f; 
+    font-family: 'Pacifico', cursive; 
+}
+
+.conocenos-header .badge { /* Etiqueta “50 años” */
+    display: inline-block; 
+    background: #fff0f5; /* Fondo pastel */
+    color: #ff7aa8; /* Texto rosa */
+    font-weight: bold; 
+    padding: 6px 14px; 
+    border-radius: 20px; 
+    font-size: 14px; 
+    margin-top: 6px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+}
+
+/* Párrafo introductorio */
+.conocenos .lead { /* Texto principal de Conócenos */
+    max-width: 900px; 
+    margin: 0 auto 40px; 
+    padding: 20px 25px; 
+    font-size: 17px; 
+    line-height: 1.8; 
+    color: #4a3f3f; 
+    background: #fffafc; /* Fondo claro */
+    border-left: 6px solid #ff7aa8; /* Barra rosa a la izquierda */
+    border-radius: 10px; 
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05); 
+    text-align: justify; 
+}
+
+/* Bloques informativos (Misión, Visión, Valores) */
+.card.bloque { /* Caja para misión, visión, valores */
+    background: #ffffff; 
+    padding: 20px; 
+    border-radius: 16px; 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06); 
+    margin: 30px auto; 
+    max-width: 950px; 
+    text-align: center; 
+}
+
+.card.bloque img { /* Imagen en cada bloque */
+    width: 300px; 
+    border-radius: 12px; 
+    object-fit: cover; 
+    margin: 10px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+}
+
+.card.bloque h2 { /* Título de cada bloque */
+    color: #ff7aa8; 
+    margin: 15px 0 10px; 
+    font-size: 24px; 
+}
+
+.card.bloque p { /* Texto dentro del bloque */
+    font-size: 15px; 
+    color: #6b5b5b; 
+    line-height: 1.6; 
+}
+
+/* Valores */
+.valores { /* Contenedor de lista de valores */
+    display: flex; 
+    flex-direction: column; /* Apila verticalmente */
+    gap: 15px; 
+    margin-top: 15px; 
+}
+
+.valor { /* Cada valor (icono + texto) */
+    display: flex; 
+    align-items: flex-start; 
+    gap: 12px; 
+    text-align: left; 
+}
+
+.valor .icon { /* Icono de cada valor */
+    font-size: 22px; 
+    flex-shrink: 0; 
+}
+
+.valor .texto h3 { /* Título de cada valor */
+    margin: 0; 
+    font-size: 18px; 
+    color: #3b2f2f; 
+}
+
+.valor .texto p { /* Descripción de cada valor */
+    margin: 2px 0 0; 
+    font-size: 14px; 
+    color: #6b5b5b; 
+}
+
+/* =========================
+    RESPONSIVE
+   ========================= */
+@media (max-width: 768px) { /* Ajustes móviles */
+    .banner-contenido,
+    .conocenos-header {
+        flex-direction: column; /* Elementos en columna */
+        text-align: center; /* Texto centrado */
+    }
+
+    .banner-imagen img,
+    .card.bloque img {
+        width: 150px; /* Imágenes más pequeñas en móvil */
+    }
+
+    .valores {
+        gap: 10px; /* Menos espacio entre valores */
+    }
+}
+
+/* ======================
+    Comentarios Slider
+====================== */
+.comentarios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.comentarios h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.comentarios-slider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    position:relative;
+}
+
+.comentarios-container{
+    display:flex;
+    gap:20px;
+    overflow:hidden;
+    width:100%;
+    max-width:1000px;
+    scroll-behavior:smooth;
+}
+
+.comentario{
+    min-width:300px;
+    background-color:#fff;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    transition: transform 0.3s;
+}
+
+.comentario:hover{
+    transform:scale(1.03);
+}
+
+.cliente-foto {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.comentario-texto p {
+    font-size:0.95em;
+    color:#333;
+    margin-bottom:10px;
+}
+
+.comentario-texto h4 {
+    margin:0;
+    font-weight:bold;
+    color:#555;
+}
+
+.comentarios-slider button{
+    background:none;
+    border:none;
+    font-size:30px;
+    color:#e91e63;
+    cursor:pointer;
+    transition: color 0.3s;
+}
+
+.comentarios-slider button:hover{
+    color:#ff69b4;
+}
+
+/* ======================
+    Footer
+====================== */
+footer {
+    background-color: #ffd1dc;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: #e91e63;
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin: 0 5px;
+    color: #e91e63;
+}
+
+.newsletter input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px;
+}
+
+.newsletter button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffc0cb;
+    color: #333;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background-color: #ffb6c1;
+}

@@ -1,0 +1,146 @@
+/* ======================
+    Variables y Estilos Generales
+====================== */
+:root {
+    --color-primario: #e91e63;
+    --color-secundario: #ffd1dc;
+    --color-fondo: #fff0f5;
+    --color-boton: #f7c1c1;
+    --color-boton-hover: #f5a1a1;
+    --color-footer-boton: #ffc0cb;
+    --color-footer-boton-hover: #ffb6c1;
+    --color-texto: #333;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    color: #f57c7c;
+}
+
+h2 {
+    color: var(--color-primario);
+}
+
+/* ======================
+    Header
+====================== */
+header {
+    background-color: var(--color-secundario);
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-navegacion {
+    display: flex;
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-navegacion a:hover {
+    color: var(--color-primario);
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.acciones a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: bold;
+}
+
+.acciones a:hover {
+    color: var(--color-primario);
+}
+
+.menu-hamburguesa {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ======================
+    Login
+====================== */
+.login-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: var(--color-boton);
+    color: var(--color-texto);
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+.extra {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
