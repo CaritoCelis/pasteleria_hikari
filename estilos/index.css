@@ -1,0 +1,239 @@
+/* ======================
+    Estilos Generales
+====================== */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #e91e63;
+}
+
+/* ======================
+    Header
+====================== */
+header {
+    background-color: #ffd1dc;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-navegacion a:hover {
+    color: #e91e63;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.acciones a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.acciones a:hover {
+    color: #e91e63;
+}
+
+.menu-hamburguesa {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ======================
+    Responsive
+====================== */
+@media (max-width: 768px) {
+    .menu-navegacion {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ffd1dc;
+        padding: 15px 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+
+    .menu-navegacion ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .acciones {
+        order: 3;
+        justify-content: flex-end;
+        width: auto;
+    }
+}
+
+.menu-navegacion.active {
+    display: block;
+}
+
+/* ======================
+    Banner
+====================== */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f0efef;
+    font-size: 36px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 2px #fff0ff;
+}
+
+/* ======================
+    Productos Destacados
+====================== */
+.productos-destacados {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffe4e1;
+    font-size: 20px;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    align-items: stretch;
+    justify-items: stretch;
+    background-color: #ffe4e1;
+    
+}
+
+.producto {
+    background-color: #fff0f5;
+    border-radius: 12px;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 00%;
+    min-height: 200px;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    width: 0%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.producto button,
+.detalle,
+.btn-nosotros a {
+    background-color: #ffc0cb;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.producto button:hover,
+.ver-mas a:hover,
+.btn-nosotros a:hover {
+    background-color: #ffb6c1;
+}
+
+.ver-mas {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #ffe4e1;
+    padding: 20px;
+    
+}
+
+.ver-mas .btn-ver-mas {
+    display: inline-block;
+    background-color: #ff6f91; /* 🌸 rosado pastel muy suave */
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    font-size: 16;
+    
+}
+
+.ver-mas .btn-ver-mas:hover {
+    background-color: #ff69b4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
