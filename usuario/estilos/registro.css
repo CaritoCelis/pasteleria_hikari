@@ -1,0 +1,85 @@
+body {
+    font-family: 'Lato', sans-serif;
+  background-color: #FFF5E1; /* crema pastel */
+  color: #5D4037; /* marrón oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+  background-color: #FFC0CB; /* rosa suave */
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+  color: #8B4513; /* chocolate */
+    margin: 0;
+}
+
+section.registro {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+section.registro h2 {
+    text-align: center;
+    color: #8B4513;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #FFC0CB;
+    color: #5D4037;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #ff9eb5;
+}
+
+/* ✅ Mensajes de validación */
+.mensaje {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.mensaje.error {
+  background: #ffe0e0; /* rojo pastel */
+  color: #8B0000; /* rojo oscuro */
+}
+
+.mensaje.exito {
+  background: #d4f7d4; /* verde pastel */
+  color: #006400; /* verde oscuro */
+}

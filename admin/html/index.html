@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - Pastelería Hikari</title>
+    <link rel="stylesheet" href="/admin/css/index.css">
+</head>
+<body>
+
+<script>
+    // Verificar sesión de admin
+    if(localStorage.getItem('adminLogueado') !== 'true'){
+        alert('Debes iniciar sesión como administrador');
+        window.location.href = 'login.html';
+    }
+</script>
+
+<header>
+    <h1>Panel Administrativo - Pastelería Hikari</h1>
+    <nav>
+        <ul>
+            <li><a href="#" id="menu-tablero">Tablero</a></li>
+            <li><a href="#" id="menu-productos">Productos</a></li>
+            <li><a href="#" id="menu-pedidos">Pedidos</a></li>
+            <li><a href="#" id="menu-usuarios">Usuarios</a></li>
+        </ul>
+    </nav>
+    <button id="btn-logout">Cerrar Sesión</button>
+</header>
+
+<main>
+    <!-- Tablero -->
+    <section id="tablero" class="active">
+        <h2>Tablero</h2>
+        <p>Bienvenido al panel administrativo.</p>
+        <div class="estadisticas">
+            <div class="tarjeta-estadistica">
+                <h3>Productos</h3>
+                <p id="total-productos">0</p>
+            </div>
+            <div class="tarjeta-estadistica">
+                <h3>Pedidos</h3>
+                <p id="total-pedidos">0</p>
+            </div>
+            <div class="tarjeta-estadistica">
+                <h3>Usuarios</h3>
+                <p id="total-usuarios">0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos">
+        <h2>Gestión de Productos</h2>
+        <button id="btn-agregar-producto">Agregar Producto</button>
+        <table id="tabla-productos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!-- Pedidos -->
+    <section id="pedidos">
+        <h2>Gestión de Pedidos</h2>
+        <table id="tabla-pedidos">
+            <thead> 
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Cliente</th>
+                    <th>Productos</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!-- Usuarios -->
+    <section id="usuarios">
+        <h2>Gestión de Usuarios</h2>
+        <button id="btn-agregar-usuario">Agregar Usuario</button>
+        <table id="tabla-usuarios">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+</main>
+
+<script src="../js/index.js"></script>
+</body>
+</html>
