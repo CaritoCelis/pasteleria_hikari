@@ -1,0 +1,145 @@
+
+
+
+
+
+
+/* ======================
+    Estilos Carrito de Compras
+====================== */
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-navegacion ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.carrito-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    display: none;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f7c1c1;
+}
+
+.vacio {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.total-carrito {
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.descuento-info {
+    font-size: 0.9em;
+    color: green;
+}
+
+.acciones-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.acciones-carrito a, .acciones-carrito button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #f7c1c1;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.acciones-carrito button:hover, .acciones-carrito a:hover {
+    background-color: #f5a1a1;
+}
+
+input.cantidad-carrito {
+    width: 50px;
+    text-align: center;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+    table thead {
+    display: none;
+    }
+
+    table, table tbody, table tr, table td {
+    display: block;
+    width: 100%;
+    }
+
+    table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    }
+
+    table td {
+    text-align: right;
+    padding: 8px;
+    position: relative;
+    }
+
+    table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-align: left;
+    }
+
+    .acciones-carrito {
+    flex-direction: column;
+    }
+
+    .acciones-carrito a, .acciones-carrito button {
+    width: 100%;
+    text-align: center;
+    }
+}

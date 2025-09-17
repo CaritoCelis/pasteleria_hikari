@@ -6,11 +6,12 @@
     <title>Pastelería Hikari</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="estilos/index.css">
-    <link rel="stylesheet" href="estilos/productos.css">
-    <link rel="stylesheet" href="estilos/detalle_producto.css">
-    <link rel="stylesheet" href="estilos/registro.css">
-    <link rel="stylesheet" href="estilos/nosotros.css">
+    <link rel="stylesheet" href="/usuario/estilos/index.css">
+    <link rel="stylesheet" href="/usuario/estilos/productos.css">
+    <link rel="stylesheet" href="/usuario/estilos/detalle_producto.css">
+    <link rel="stylesheet" href="/usuario/estilos/registro.css">
+    <link rel="stylesheet" href="/usuario/estilos/nosotros.css">
+    <link rel="stylesheet" href="/usuario/estilos/styles.css">
 </head>
 <body>
 
@@ -18,7 +19,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="img/logo_8.jpg" alt="Logo Pastelería Hikari" width="120">
+                <img src="img/logo_5.png" alt="Logo Pastelería Hikari" width="120">
             </div>
 
             <!-- Botón hamburguesa -->
@@ -30,165 +31,188 @@
             <div class="menu-navegacion">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="/paginas/productos.html">Productos</a></li>
-                    <li><a href="/paginas/nosotros.html">Nosotros</a></li>
-                    <li><a href="/paginas/blog.html">Blog</a></li>
-                    <li><a href="/paginas/contacto.html">Contacto</a></li>
+                    <li><a href="/usuario/paginas/productos.html">Productos</a></li>
+                    <li><a href="/usuario/paginas/nosotros.html">Nosotros</a></li>
+                    <li><a href="/usuario/paginas/blog.html">Blog</a></li>
+                    <li><a href="/usuario/paginas/contacto.html">Contacto</a></li>
                 </ul>
             </div>
 
             <!-- Acciones -->
             <div class="acciones">
-                <a href="/paginas/login.html">Iniciar sesión</a> | 
-                <a href="/paginas/registro.html">Registro</a>
-                <a href="/paginas/carrito.html" aria-label="Carrito de compras">🛒 (0)</a>
+                <a href="/usuario/paginas/login.html">Iniciar sesión</a> | 
+                <a href="/usuario/paginas/registro.html">Registro</a>
+                <a href="/usuario/paginas/carrito.html" aria-label="Carrito de compras">🛒 (0)</a>
             </div>
         </div>
     </header>
 
     <!-- BANNER -->
     <div class="banner">
-        <img src="img/logo_10.jpg" alt="Banner Pastelería Hikari">
+        <img src="img/fondo_5.jpg" alt="Banner Pastelería Hikari">
         <div class="banner-texto">  
             🌸 Bienvenidos a Pastelería Hikari 🌸<br>
             Celebramos 50 años de tradición en repostería chilena.
         </div>
     </div>
 
-    <!-- Productos Destacados -->
-    <div class="productos-titulo">
-        <h2>🍰 Productos Destacados</h2>
-        <h3>Endulza tus momentos con la mejor repostería artesanal</h3>
-    </div>
 
-    <!-- Grid productos -->
-    <section class="grid-productos">
-        <!-- Producto -->
-        <div class="producto">
-            <img src="img/cuadrada_chocolate_1.jpeg" alt="Torta de Chocolate">
-            <h3>Torta cuadrada de Chocolate</h3>
-            <p class="precio">$45.000</p>
-            <div class="acciones-producto">
+
+
+
+
+<!-- Productos Destacados -->
+<div class="productos-titulo">
+    <h2>🍰 Productos Destacados</h2>
+    <h3>Endulza tus momentos con la mejor repostería artesanal</h3>
+</div>
+
+<!-- Grid productos --> 
+<section class="grid-productos">
+
+    <div class="producto">
+        <img src="img/cuadrada_chocolate_1.jpeg" alt="Torta de Chocolate" 
+            onclick="window.location.href='paginas/detalle_producto.html?producto=chocolate'">
+        <h3>Torta Cuadrada de Chocolate</h3>
+        <p class="precio">$45.000</p>
+        <div class="acciones-producto">
             <button>Añadir al carrito</button>
-            <a href="detalle_producto.html?producto=chocolate" class="detalle">Detalle</a>
+            <a href="/usuario/paginas/detalle_producto.html?producto=chocolate" class="detalle">Detalle</a>
         </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/circular_vainilla_2.jpeg" alt="Torta de Vainilla">
-            <h3>Torta circular de Vainilla</h3>
-            <p class="precio">$40.000</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=vainilla" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/especial_cumpleaños_2.jpeg" alt="Especial Cumpleaños">
-            <h3>Torta especial de Cumpleaños</h3>
-            <p class="precio">$55.000</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=cumpleaños" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/galletas_vegana_avena_2.jpeg" alt="galletas veganas de avena">
-            <h3>Galletas Veganas de Avena</h3>
-            <p class="precio">$4.500</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=vegana" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/cheesecake_2.jpeg" alt="Cheesecake">
-            <h3>Cheesecake sin Azúcar</h3>
-            <p class="precio">$47.000</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=sin-azucar" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/cuadrada_frutas_2.jpeg" alt="Torta de frutas">
-            <h3>Torta cuadrada de frutas</h3>
-            <p class="precio">$50.000</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=cuadrada" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/boda_especial_3.jpeg" alt="Torta de boda">
-            <h3>Torta especial de boda</h3>
-            <p class="precio">$60.000</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=boda" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/tiramisu_1.jpeg" alt="Tiramusu">
-            <h3>Tiramusú clásico</h3>
-            <p class="precio">$5.500</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=tiramisu" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/pan_singluten.jpeg" alt="Pan sin gluten">
-            <h3>Pan sin Glúten</h3>
-            <p class="precio">$3.500</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=sin-gluten" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/especial_cumpleaños_11.jpeg" alt="Especial Cumpleaños">
-            <h3>Torta especial de Cumpleaños</h3>
-            <p class="precio">$55.000</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=cumpleaños" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/brownie_1.jpeg" alt="Brownie">
-            <h3>Brownie sin Glúten</h3>
-            <p class="precio">$4.000</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=sin-gluten" class="detalle">Detalle</a>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="img/empanada_manzana_1.jpeg" alt="empanada de manzana">
-            <h3>Empanada de Manzana</h3>
-            <p class="precio">$3.000</p>
-            <div class="acciones-producto">
-                <button>Añadir al carrito</button>
-                <a href="detalle_producto.html?producto=empanada" class="detalle">Detalle</a>
-            </div>
-        </div>
-        </section>
-
-        <!-- Ver más productos -->
-    <div class="ver-mas">
-    <a href="/paginas/productos.html" class="btn-ver-mas">Ver todos nuestros productos</a>
     </div>
+
+    <div class="producto">
+        <img src="img/circular_vainilla_2.jpeg" alt="Torta de Vainilla"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=vainilla'">
+        <h3>Torta Circular de Vainilla</h3>
+        <p class="precio">$40.000</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=vainilla" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/cumple_2.jpg" alt="Torta Cumpleaños"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=cumpleaños'">
+        <h3>Torta Especial de Cumpleaños</h3>
+        <p class="precio">$55.000</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=cumpleaños" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/galletas_vegana_avena_2.jpeg" alt="Galletas Veganas"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=galletas'">
+        <h3>Galletas Veganas de Avena</h3>
+        <p class="precio">$4.500</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=galletas" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/cheesecake_2.jpeg" alt="Cheesecake"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=cheesecake'">
+        <h3>Cheesecake sin Azúcar</h3>
+        <p class="precio">$47.000</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=cheesecake" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/cuadrada_frutas_2.jpeg" alt="Torta de Frutas"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=cuadrada'">
+        <h3>Torta Cuadrada de Frutas</h3>
+        <p class="precio">$50.000</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=cuadrada" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/boda_8.jpg" alt="Torta de Boda"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=boda'">
+        <h3>Torta Especial de Boda</h3>
+        <p class="precio">$60.000</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=boda" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/tiramisu_1.jpeg" alt="Tiramisu"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=tiramisu'">
+        <h3>Tiramusú Clásico</h3>
+        <p class="precio">$5.500</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=tiramisu" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/pan_singluten.jpeg" alt="Pan sin Gluten"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=sin-gluten'">
+        <h3>Pan sin Glúten</h3>
+        <p class="precio">$3.500</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=sin-gluten" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/cumple_26.jpeg" alt="Torta Cumpleaños"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=cumpleaños'">
+        <h3>Torta Especial de Cumpleaños</h3>
+        <p class="precio">$55.000</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=cumpleaños" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/brownie_1.jpg" alt="Brownie"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=brownie'">
+        <h3>Brownie sin Glúten</h3>
+        <p class="precio">$4.000</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=brownie" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="img/empanada_4.jpg" alt="Empanada de Manzana"
+            onclick="window.location.href='paginas/detalle_producto.html?producto=empanada'">
+        <h3>Empanada de Manzana</h3>
+        <p class="precio">$3.000</p>
+        <div class="acciones-producto">
+            <button>Añadir al carrito</button>
+            <a href="/usuario/paginas/detalle_producto.html?producto=empanada" class="detalle">Detalle</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- Ver más productos -->
+<div class="ver-mas">
+    <a href="/usuario/paginas/productos.html" class="btn-ver-mas">Ver todos nuestros productos</a>
+</div>
+
+
+
+
+
 
 
 
@@ -198,8 +222,8 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-links">
-            <p><a href="index.html">Inicio</a> | <a href="/paginas/productos.html">Productos</a> | 
-            <a href="/paginas/nosotros.html">Nosotros</a></p>
+            <p><a href="index.html">Inicio</a> | <a href="/usuario/paginas/productos.html">Productos</a> | 
+            <a href="/usuario/paginas/nosotros.html">Nosotros</a></p>
         </div>
         <div class="social-icons">
             <i class="bi bi-facebook"></i>
@@ -215,6 +239,8 @@
         <p>© 2025 Pastelería Hikari - Todos los derechos reservados 🍰</p>
     </footer>
 
+    <script src="auth.js"></script>
+    <script src="usuario.js"></script>
     <script src="/JS/index.JS"></script>
 </body>
 </html>
