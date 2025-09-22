@@ -33,12 +33,12 @@ header .header-container {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
+/*
 h1 {
     text-align: center;
     margin-bottom: 15px;
 }
-
+*/
 .intro {
     text-align: center;
     margin-bottom: 20px;
@@ -55,7 +55,7 @@ label {
     font-weight: bold;
     margin-bottom: 5px;
 }
-
+/*
 input, textarea {
     width: 100%;
     padding: 10px;
@@ -63,8 +63,8 @@ input, textarea {
     border-radius: 5px;
     font-size: 1em;
 }
-
-button {
+*/
+/*button {
     width: 100%;
     padding: 12px;
     border: none;
@@ -79,7 +79,7 @@ button {
 button:hover {
     background-color: #f5a1a1;
 }
-
+*/
 .info-extra {
     margin-top: 30px;
     text-align: center;
@@ -97,4 +97,16 @@ button:hover {
     button {
     font-size: 0.9em;
     }
+}
+footer .social-icons i {
+    font-family: "Bootstrap Icons"; /* obliga a usar la fuente correcta */
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    vertical-align: -.125em;
+    font-size: 20px; /* tamaño visible */
+    color: #e91e63;
+    margin: 0 5px;
 }

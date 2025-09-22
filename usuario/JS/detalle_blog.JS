@@ -116,13 +116,15 @@ if(noticias[id]){
     document.getElementById('titulo').textContent = "Noticia no encontrada";
     document.getElementById('contenido').textContent = "La noticia que buscas no existe o fue eliminada.";
 }
-
+/*
 // Cerrar modal
 document.getElementById('cerrar-modal').onclick = ()=>{
     document.getElementById('modal').style.display = "none";
 }
-
+*/
+/*
 // Cerrar modal al hacer clic fuera de la imagen
 document.getElementById('modal').onclick = (e)=>{
     if(e.target === document.getElementById('modal')) document.getElementById('modal').style.display = "none";
 }
+*/
