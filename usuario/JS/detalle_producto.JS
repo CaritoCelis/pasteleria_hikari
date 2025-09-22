@@ -25,7 +25,7 @@ if(producto && productosData[producto]){
 }
 
 // Icono carrito
-const carritoIcon = document.querySelector(".acciones a[href='carrito.html']");
+const carritoIcon = document.querySelector(".acciones a[href='/usuario/paginas/carrito.html']");
 function actualizarIconoCarrito(){
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let totalCantidad = carrito.reduce((sum, item)=> sum + item.cantidad, 0);

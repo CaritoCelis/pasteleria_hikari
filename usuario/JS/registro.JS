@@ -17,23 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let errores = [];
     let beneficios = [];
 
-    // ✅ Validar campos vacíos
     if (!nombre || !apellido || !correo || !fechaNacimiento || !password) {
         errores.push("Todos los campos obligatorios deben estar completos.");
     }
 
-    // ✅ Validar correo permitido
     const regexCorreo = /^[a-zA-Z0-9._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
     if (!regexCorreo.test(correo)) {
         errores.push("El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com");
     }
 
-    // ✅ Validar contraseña
     if (password.length < 4 || password.length > 10) {
         errores.push("La contraseña debe tener entre 4 y 10 caracteres.");
     }
 
-    // ✅ Calcular edad solo si se ingresó fecha
     let edad = null;
     if (fechaNacimiento) {
         const hoy = new Date();
