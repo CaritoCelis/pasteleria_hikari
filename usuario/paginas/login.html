@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Pastelería Hikari</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/usuario/estilos/login.css">
     <link rel="stylesheet" href="/usuario/estilos/index.css">
     <link rel="stylesheet" href="/usuario/estilos/styles.css">
 </head>
 <body>
-        <!-- HEADER -->
     <header>
         <div class="header-container">
             <div class="logo">
                 <img src="/img/logo_5.png" alt="Logo Pastelería Hikari" width="120">
             </div>
-
-            <!-- Botón hamburguesa -->
             <div class="menu-hamburguesa" id="menu-toggle">
                 <i class="bi bi-list"></i>
             </div>
-
-            <!-- Menú navegación -->
             <div class="menu-navegacion">
                 <ul>
                     <li><a href="/index.html">Inicio</a></li>
@@ -32,8 +28,6 @@
                     <li><a href="/usuario/paginas/contacto.html">Contacto</a></li>
                 </ul>
             </div>
-
-            <!-- Acciones -->
             <div class="acciones">
                 <a href="/usuario/paginas/login.html">Iniciar sesión</a> | 
                 <a href="/usuario/paginas/registro.html">Registro</a>
@@ -41,26 +35,17 @@
             </div>
         </div>
     </header>
-
     <section class="login">
     <h2>Iniciar Sesión</h2>
     <form id="loginForm">
         <label for="correo">Correo:</label>
         <input type="email" id="correo" required>
-
         <label for="password">Contraseña:</label>
         <input type="password" id="password" required minlength="4" maxlength="10">
-
         <button type="submit">Ingresar</button>
     </form>
-
     <div id="mensaje" class="mensaje"></div>
     </section>
-
-
-
-
-    <!-- FOOTER -->
     <footer>
         <div class="footer-links">
             <p><a href="/index.html">Inicio</a> | <a href="/usuario/paginas/productos.html">Productos</a> | 
@@ -79,8 +64,8 @@
         </div>
         <p>© 2025 Pastelería Hikari - Todos los derechos reservados 🍰</p>
     </footer>
-
     <script src="../JS/login.JS"></script>
+    <script src="../JS/responsividad.js"></script>
 </body>
 </html>
 

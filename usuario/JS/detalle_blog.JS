@@ -1,4 +1,4 @@
-// Simulamos base de datos de noticias con contenido HTML completo
+
 const noticias = {
     1: {
         titulo: "🎂 Pastelería Hikari deslumbra con un pastel de 5 metros en matrimonio",
@@ -106,7 +106,6 @@ if(noticias[id]){
         img.className = 'imagen-detalle';
         contenedorImagenes.appendChild(img);
 
-        // Modal al hacer clic
         img.addEventListener('click', ()=>{
             document.getElementById('modal').style.display = "block";
             document.getElementById('imagen-modal').src = src;
@@ -115,14 +114,4 @@ if(noticias[id]){
 } else {
     document.getElementById('titulo').textContent = "Noticia no encontrada";
     document.getElementById('contenido').textContent = "La noticia que buscas no existe o fue eliminada.";
-}
-
-// Cerrar modal
-document.getElementById('cerrar-modal').onclick = ()=>{
-    document.getElementById('modal').style.display = "none";
-}
-
-// Cerrar modal al hacer clic fuera de la imagen
-document.getElementById('modal').onclick = (e)=>{
-    if(e.target === document.getElementById('modal')) document.getElementById('modal').style.display = "none";
 }

@@ -9,7 +9,6 @@ const productosData = {
     galletas: {nombre:"Galletas Veganas de Avena", precio:4500, descripcion:"Galletas veganas de avena, ideales como snack saludable.", imagen:"/img/galletas_vegana_avena_2.jpeg"}
 };
 
-// Función para agregar producto al carrito
 function agregarAlCarrito(clave, cantidad = 1){
     const producto = productosData[clave];
     if(!producto) return;
@@ -26,7 +25,6 @@ function agregarAlCarrito(clave, cantidad = 1){
     alert("Producto agregado al carrito ✅");
 }
 
-// Actualizar ícono del carrito
 const carritoIcon = document.querySelector(".acciones a[href='carrito.html']");
 function actualizarIconoCarrito(){
     if(!carritoIcon) return;
@@ -36,7 +34,6 @@ function actualizarIconoCarrito(){
 }
 actualizarIconoCarrito();
 
-// --- BOTONES DE TODOS LOS PRODUCTOS ---
 document.querySelectorAll(".producto button").forEach(btn=>{
     btn.addEventListener("click", e=>{
         const padre = e.target.closest(".producto");
@@ -49,7 +46,6 @@ document.querySelectorAll(".producto button").forEach(btn=>{
     });
 });
 
-// --- DETALLE PRODUCTO ---
 const params = new URLSearchParams(window.location.search);
 const productoParam = params.get("producto");
 if(productoParam && productosData[productoParam]){

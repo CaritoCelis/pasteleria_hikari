@@ -18,12 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         mensajeDiv.classList.add("exito");
         mensajeDiv.innerHTML = `<p>✅ Bienvenido, ${usuario.nombre} ${usuario.apellido}</p>`;
 
-      // Guardar sesión activa
         localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
 
-      // Redirigir a la tienda (ejemplo: index.html)
         setTimeout(() => {
-        window.location.href = "index.html";
+        window.location.href = "/index.html";
         }, 1500);
 
     } else {

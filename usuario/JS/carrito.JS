@@ -1,4 +1,4 @@
-// Referencias DOM
+
 const cuerpoCarrito = document.getElementById("cuerpo-carrito");
 const totalCarritoEl = document.getElementById("total-carrito");
 const carritoVacio = document.getElementById("carrito-vacio");
@@ -6,12 +6,12 @@ const tablaCarrito = document.getElementById("tabla-carrito");
 const carritoIcon = document.querySelector(".acciones a[href='carrito.html']");
 const descuentoInfo = document.getElementById("descuento-aplicado");
 
-// Función para obtener usuario (si hay)
+
 function obtenerUsuario() {
     return JSON.parse(localStorage.getItem("usuario")) || null;
 }
 
-// Calcular descuentos según usuario
+
 function calcularDescuento(total) {
     const usuario = obtenerUsuario();
     let descuento = 0;
@@ -22,19 +22,16 @@ function calcularDescuento(total) {
     const hoy = new Date();
     const cumple = new Date(usuario.fechaNacimiento);
 
-    // 🎂 Estudiante Duoc y cumpleaños → gratis
     if (usuario.email && usuario.email.includes("@duoc.cl") &&
         hoy.getDate() === cumple.getDate() &&
         hoy.getMonth() === cumple.getMonth()) {
         descuento = total;
         mensaje = "¡Feliz cumpleaños! 🎂 Tu torta es gratis.";
     }
-    // 👴 Mayores de 50 años → 50% off
     else if (usuario.edad >= 50) {
         descuento = total * 0.5;
         mensaje = "Descuento 50% aplicado por ser mayor de 50 años.";
     }
-    // 🎫 Código promocional
     else if (usuario.codigo === "FELICES50") {
         descuento = total * 0.1;
         mensaje = "Descuento 10% aplicado con código FELICES50.";
@@ -43,19 +40,16 @@ function calcularDescuento(total) {
     return { totalFinal: total - descuento, mensaje };
 }
 
-// Actualizar ícono del carrito
 function actualizarIconoCarrito() {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let totalCantidad = carrito.reduce((sum, item) => sum + item.cantidad, 0);
     if(carritoIcon) carritoIcon.textContent = `🛒 (${totalCantidad})`;
 }
 
-// Formato moneda
 function formatoMoneda(valor) {
     return "$" + valor.toLocaleString("es-CL");
 }
 
-// Agregar producto al carrito
 function agregarAlCarrito(nombre, precio, cantidad = 1) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     const index = carrito.findIndex(p => p.nombre === nombre);
@@ -68,7 +62,6 @@ function agregarAlCarrito(nombre, precio, cantidad = 1) {
     alert("Producto agregado al carrito ✅");
 }
 
-// Actualizar carrito en la página
 function actualizarCarrito() {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     cuerpoCarrito.innerHTML = "";
@@ -107,7 +100,6 @@ function actualizarCarrito() {
     totalCarritoEl.textContent = formatoMoneda(totalFinal);
     descuentoInfo.textContent = mensaje;
 
-    // Cambiar cantidad
     document.querySelectorAll(".cantidad-carrito").forEach(input => {
         input.addEventListener("change", (e) => {
             const index = e.target.dataset.index;
@@ -119,7 +111,6 @@ function actualizarCarrito() {
         });
     });
 
-    // Eliminar producto
     document.querySelectorAll(".eliminar").forEach(btn => {
         btn.addEventListener("click", (e) => {
             const index = e.target.dataset.index;
@@ -132,7 +123,6 @@ function actualizarCarrito() {
     actualizarIconoCarrito();
 }
 
-// Botón vaciar carrito
 const btnVaciar = document.getElementById("vaciar-carrito");
 if (btnVaciar) {
     btnVaciar.addEventListener("click", () => {
@@ -143,7 +133,6 @@ if (btnVaciar) {
     });
 }
 
-// Botón pagar
 const btnPagar = document.getElementById("pagar");
 if (btnPagar) {
     btnPagar.addEventListener("click", () => {
@@ -154,10 +143,8 @@ if (btnPagar) {
     });
 }
 
-// Inicializar carrito
 actualizarCarrito();
 
-// Agregar productos desde botones de página principal
 document.querySelectorAll(".producto button").forEach(btn => {
     btn.addEventListener("click", (e) => {
         const padre = e.target.closest(".producto");
@@ -169,7 +156,6 @@ document.querySelectorAll(".producto button").forEach(btn => {
     });
 });
 
-// Agregar producto desde detalle_producto.html
 const params = new URLSearchParams(window.location.search);
 const productoParam = params.get("producto");
 if(productoParam && productosData[productoParam]){

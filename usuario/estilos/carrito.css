@@ -1,12 +1,4 @@
 
-
-
-
-
-
-/* ======================
-    Estilos Carrito de Compras
-====================== */
 header .header-container {
     display: flex;
     justify-content: space-between;
@@ -101,7 +93,6 @@ input.cantidad-carrito {
     text-align: center;
 }
 
-/* 📱 Responsividad */
 @media (max-width: 768px) {
     table thead {
     display: none;
