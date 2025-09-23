@@ -1,6 +1,4 @@
-/* ======================
-    Estilos Generales
-====================== */
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: #fff0f5;
@@ -14,10 +12,6 @@ h2 {
 }
 
 
-
-/* ======================
-    Responsive
-====================== */
 @media (max-width: 768px) {
     .menu-navegacion {
         display: none;

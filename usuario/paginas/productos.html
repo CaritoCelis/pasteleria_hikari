@@ -261,6 +261,7 @@
     </footer>
 
     <script src="/usuario/JS/productos.js"></script>
+    <script src="../JS/responsividad.js"></script>
 </body>
 <script>
     document.getElementById("categoria").addEventListener("change", function() {
@@ -268,11 +269,9 @@
         const productos = document.querySelectorAll(".producto");
 
         productos.forEach(producto => {
-            // si selecciona "todos", mostramos todo
             if (seleccion === "todos") {
                 producto.style.display = "block";
             } else {
-                // mostramos solo los que tengan la clase correspondiente
                 if (producto.classList.contains(seleccion)) {
                     producto.style.display = "block";
                 } else {
@@ -281,5 +280,6 @@
             }
         });
     });
+    
 </script>
 </html>

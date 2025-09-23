@@ -87,7 +87,6 @@ button:hover {
     color: #444;
 }
 
-/* 📱 Responsividad */
 @media (max-width: 600px) {
     .contacto-container {
     margin: 15px;
@@ -99,14 +98,14 @@ button:hover {
     }
 }
 footer .social-icons i {
-    font-family: "Bootstrap Icons"; /* obliga a usar la fuente correcta */
+    font-family: "Bootstrap Icons";
     display: inline-block;
     font-style: normal;
     font-weight: normal;
     line-height: 1;
     text-decoration: inherit;
     vertical-align: -.125em;
-    font-size: 20px; /* tamaño visible */
+    font-size: 20px;
     color: #e91e63;
     margin: 0 5px;
 }

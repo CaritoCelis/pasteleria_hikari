@@ -29,7 +29,6 @@ function añadirAlCarrito(producto) {
     alert(`✅ "${producto.nombre}" agregado al carrito`);
 }
 
-// Detectar botones "Añadir al carrito"
 document.querySelectorAll(".acciones-producto button, #añadir-carrito").forEach(button => {
     button.addEventListener("click", function() {
         // Obtenemos datos del producto según donde esté el botón
@@ -45,5 +44,4 @@ document.querySelectorAll(".acciones-producto button, #añadir-carrito").forEach
     });
 });
 
-// Inicializar contador al cargar la página
 actualizarContador();

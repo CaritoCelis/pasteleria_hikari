@@ -1,6 +1,4 @@
-/* ======================
-    Estilos Generales
-====================== */
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: #fff0f5;
@@ -13,10 +11,8 @@ h2 {
     color: #e91e63;
 }
 
-/* ======================
-    Header
-====================== */
-header {
+
+header {    
     background-color: #ffd1dc;
     padding: 10px 20px;
 }
@@ -70,9 +66,6 @@ header {
     cursor: pointer;
 }
 
-/* ======================
-    Responsive
-====================== */
 @media (max-width: 768px) {
     .menu-navegacion {
         display: none;
@@ -109,9 +102,6 @@ header {
 
 
 
-/* ======================
-    FOOTER
-====================== */
 footer {
     background-color: #ffd1dc;
     text-align: center;

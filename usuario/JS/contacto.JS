@@ -10,7 +10,6 @@ document.getElementById("form-contacto").addEventListener("submit", (e) => {
     return;
     }
 
-  // Guardar mensaje en localStorage como simulación de envío
     const nuevoMensaje = { nombre, email, mensaje, fecha: new Date().toLocaleString() };
 
     let mensajes = JSON.parse(localStorage.getItem("mensajesContacto")) || [];
