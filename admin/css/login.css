@@ -1,9 +1,9 @@
-/* Login Administrador */
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    background-color: #ffe6f0; /* Rosado suave */
+    background-color: #ffe6f0;
     display: flex;
     justify-content: center;
     align-items: center;

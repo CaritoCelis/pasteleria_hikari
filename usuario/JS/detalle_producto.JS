@@ -1,8 +1,7 @@
-// Obtener parámetro "producto" de la URL
+
 const params = new URLSearchParams(window.location.search);
 const producto = params.get("producto");
 
-// Datos de productos
 const productosData = {
     chocolate: {nombre:"Torta Cuadrada de Chocolate", precio:45000, descripcion:"Torta cuadrada de chocolate premium con ganache.", imagen:"/img/cuadrada_chocolate_1.jpeg"},
     vainilla: {nombre:"Torta Circular de Vainilla", precio:40000, descripcion:"Torta circular de vainilla con crema y decoraciones.", imagen:"/img/circular_vainilla_2.jpeg"},
@@ -15,7 +14,6 @@ const productosData = {
 
 };
 
-// Mostrar producto
 if(producto && productosData[producto]){
     const data = productosData[producto];
     document.getElementById("img-producto").src = data.imagen;
@@ -24,7 +22,6 @@ if(producto && productosData[producto]){
     document.getElementById("descripcion-producto").textContent = data.descripcion;
 }
 
-// Icono carrito
 const carritoIcon = document.querySelector(".acciones a[href='/usuario/paginas/carrito.html']");
 function actualizarIconoCarrito(){
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -33,7 +30,6 @@ function actualizarIconoCarrito(){
 }
 actualizarIconoCarrito();
 
-// Agregar al carrito con input de cantidad
 document.getElementById("añadir-carrito").addEventListener("click", ()=>{
     let cantidad = parseInt(document.getElementById("cantidad").value);
     if(isNaN(cantidad) || cantidad < 1) cantidad = 1;

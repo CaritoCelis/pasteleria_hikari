@@ -1,20 +1,20 @@
 body {
     font-family: 'Lato', sans-serif;
-  background-color: #FFF5E1; /* crema pastel */
-  color: #5D4037; /* marrón oscuro */
+  background-color: #FFF5E1; 
+  color: #5D4037;
     margin: 0;
     padding: 0;
 }
 
 header {
-  background-color: #FFC0CB; /* rosa suave */
+  background-color: #FFC0CB;
     padding: 15px;
     text-align: center;
 }
 
 header h1 {
     font-family: 'Pacifico', cursive;
-  color: #8B4513; /* chocolate */
+  color: #8B4513; 
     margin: 0;
 }
 
@@ -66,7 +66,6 @@ form button:hover {
     background-color: #ff9eb5;
 }
 
-/* ✅ Mensajes de validación */
 .mensaje {
     margin-top: 15px;
     padding: 12px;
@@ -75,11 +74,11 @@ form button:hover {
 }
 
 .mensaje.error {
-  background: #ffe0e0; /* rojo pastel */
-  color: #8B0000; /* rojo oscuro */
+  background: #ffe0e0;
+  color: #8B0000;
 }
 
 .mensaje.exito {
-  background: #d4f7d4; /* verde pastel */
-  color: #006400; /* verde oscuro */
+  background: #d4f7d4;
+  color: #006400;
 }

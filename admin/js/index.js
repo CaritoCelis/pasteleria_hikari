@@ -1,9 +1,8 @@
-// Verificación de sesión
+
 if(localStorage.getItem('adminLogueado') !== 'true'){
     window.location.href = 'login.html';
 }
 
-// Menú de navegación
 const menuTablero = document.getElementById('menu-tablero');
 const menuProductos = document.getElementById('menu-productos');
 const menuPedidos = document.getElementById('menu-pedidos');
@@ -26,7 +25,6 @@ menuProductos.addEventListener('click', () => mostrarSeccion(productos));
 menuPedidos.addEventListener('click', () => mostrarSeccion(pedidos));
 menuUsuarios.addEventListener('click', () => mostrarSeccion(usuarios));
 
-// Datos simulados
 let productosData = [
     {id: 1, nombre: 'Tarta de Fresas', precio: 15000, categoria: 'Tartas'},
     {id: 2, nombre: 'Pan de Chocolate', precio: 2000, categoria: 'Panadería'},
@@ -41,7 +39,6 @@ let usuariosData = [
     {id: 2, nombre: 'Carolina', email: 'caro@gmail.com', rol: 'Usuario'}
 ];
 
-// Funciones de carga
 function cargarProductos() {
     const tbody = document.querySelector('#tabla-productos tbody');
     tbody.innerHTML = '';
@@ -96,7 +93,6 @@ function cargarUsuarios() {
     document.getElementById('total-usuarios').textContent = usuariosData.length;
 }
 
-// Funciones de ejemplo
 function editarProducto(id) { alert(`Editar producto ${id}`); }
 function eliminarProducto(id) {
     productosData = productosData.filter(p => p.id !== id);
@@ -111,7 +107,6 @@ function eliminarUsuario(id) {
     cargarUsuarios();
 }
 
-// Agregar usuario ejemplo
 document.getElementById('btn-agregar-usuario').addEventListener('click', () => {
     const nuevoId = usuariosData.length + 1;
     const nuevoUsuario = {id: nuevoId, nombre: 'Nuevo Usuario', email: 'nuevo@hikari.cl', rol: 'Usuario'};
@@ -119,13 +114,11 @@ document.getElementById('btn-agregar-usuario').addEventListener('click', () => {
     cargarUsuarios();
 });
 
-// Logout
 document.getElementById('btn-logout').addEventListener('click', () => {
     localStorage.removeItem('adminLogueado');
     window.location.href = 'login.html';
 });
 
-// Inicializar tablas
 cargarProductos();
 cargarPedidos();
 cargarUsuarios();

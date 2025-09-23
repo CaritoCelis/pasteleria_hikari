@@ -1,12 +1,12 @@
-/* Panel Administrativo */
+
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
-    background-color: #ffe6f0; /* Rosado muy suave de fondo */
+    background-color: #ffe6f0;
 }
 
 header {
-    background-color: #ff66aa; /* Rosado medio */
+    background-color: #ff66aa;
     color: white;
     padding: 20px;
     display: flex;
@@ -105,7 +105,7 @@ table th, table td {
 }
 
 table th {
-    background-color: #ff99c2; /* Rosado medio para cabecera */
+    background-color: #ff99c2;
     color: #fff;
 }
 
@@ -114,7 +114,7 @@ button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    background-color: #ff66aa; /* Botones rosados medios */
+    background-color: #ff66aa;
     color: #fff;
     margin: 2px;
     transition: opacity 0.3s;
