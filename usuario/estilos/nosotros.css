@@ -18,68 +18,28 @@
     flex-wrap: wrap; 
 }
 
-.bloque-aniversario .banner-imagen {
-    width: auto;         
-    max-width: 4000px;     
-    max-height: 250px;   
-    object-fit: cover;   
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-
-
-.bloque-aniversario .banner-imagen img {
-    width: 100%;        
-    max-width: 1500px;  
-    height: auto;       
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
 .bloque-aniversario .banner-texto {
     flex: 2; 
 }
 
 .bloque-aniversario .banner-texto h2 {
+    text-align: center; 
     color: #ff7aa8;
-    font-size: 28px;
+    font-size: 38px;
     margin-bottom: 10px;
     font-family: 'Lato', cursive;
 }
 
 .bloque-aniversario .banner-texto p {
+    text-align: right; 
     font-size: 18px;
     line-height: 1.6;
     color: #6b5b5b;
     margin: 0 0 20px 0;
-    text-align: left;
     max-width: 800px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
 }
-
-@media (max-width: 768px) {
-    .bloque-aniversario .banner-contenido {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .bloque-aniversario .banner-texto {
-        flex: 1;
-    }
-
-    .bloque-aniversario .banner-imagen img {
-        width: 150px;
-        max-width: 100%;
-    }
-}
-
-
-
-
-
-
 
 .conocenos-header { 
     display: flex; 
@@ -118,7 +78,6 @@
     margin-top: 6px; 
     box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
 }
-
 
 .conocenos .lead {
     max-width: 900px; 
@@ -195,24 +154,6 @@
     color: #6b5b5b; 
 }
 
-@media (max-width: 768px)
-    .banner-contenido,
-    .conocenos-header {
-        flex-direction: column;
-        text-align: center; 
-    }
-
-    .banner-imagen img,
-    .card.bloque img {
-        width: 150px;
-    }
-
-    .valores {
-        gap: 10px; 
-    }
-}
-
-
 .comentarios {
     text-align: center;
     padding: 50px 20px;
@@ -224,68 +165,454 @@
     margin-bottom: 40px;
 }
 
-.comentarios-slider{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    position:relative;
+.comentarios-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
 }
 
-.comentarios-container{
-    display:flex;
-    gap:20px;
-    overflow:hidden;
-    width:100%;
-    max-width:1000px;
-    scroll-behavior:smooth;
+.comentarios-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    scroll-behavior: smooth;
 }
 
-.comentario{
-    min-width:300px;
-    background-color:#fff;
-    border-radius:12px;
-    padding:20px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+.comentario {
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: transform 0.3s;
 }
 
-.comentario:hover{
-    transform:scale(1.03);
+.comentario:hover {
+    transform: scale(1.03);
 }
 
 .cliente-foto {
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .comentario-texto p {
-    font-size:0.95em;
-    color:#333;
-    margin-bottom:10px;
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .comentario-texto h4 {
-    margin:0;
-    font-weight:bold;
-    color:#555;
+    margin: 0;
+    font-weight: bold;
+    color: #555;
 }
 
-.comentarios-slider button{
-    background:none;
-    border:none;
-    font-size:30px;
-    color:#e91e63;
-    cursor:pointer;
+.comentarios-slider button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #e91e63;
+    cursor: pointer;
     transition: color 0.3s;
+    flex-shrink: 0;
 }
 
-.comentarios-slider button:hover{
-    color:#ff69b4;
+.comentarios-slider button:hover {
+    color: #ff69b4;
+}
+
+
+@media (max-width: 768px) {
+
+    .bloque-aniversario {
+        padding: 40px 15px;
+        margin: 30px 10px;
+    }
+    
+    .bloque-aniversario .banner-contenido,
+    .conocenos-header {
+        flex-direction: column;
+        text-align: center; 
+        gap: 20px;
+    }
+
+    .bloque-aniversario .banner-texto {
+        flex: 1;
+    }
+    
+    .bloque-aniversario .banner-texto h2 {
+        font-size: 32px;
+    }
+    
+    .bloque-aniversario .banner-texto p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .bloque-aniversario .banner-imagen img,
+    .card.bloque img {
+        width: 200px;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .conocenos-header {
+        margin: 30px 10px 15px;
+        padding: 0 10px;
+    }
+    
+    .conocenos-header .logo-placeholder {
+        font-size: 24px;
+        padding: 15px 18px;
+    }
+    
+    .conocenos-header h1 {
+        font-size: 24px;
+    }
+    
+    .card.bloque {
+        margin: 25px 10px;
+        padding: 18px;
+    }
+    
+    .card.bloque h2 {
+        font-size: 22px;
+    }
+    
+    .conocenos .lead {
+        margin: 0 10px 30px;
+        padding: 18px 20px;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .valores {
+        gap: 12px; 
+    }
+    
+    .valor .texto h3 {
+        font-size: 16px;
+    }
+    
+    .valor .texto p {
+        font-size: 13px;
+    }
+    
+    .comentarios {
+        padding: 40px 15px;
+    }
+    
+    .comentarios h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    
+    .comentarios-container {
+        max-width: 600px;
+        gap: 15px;
+    }
+    
+    .comentario {
+        min-width: 280px;
+        padding: 18px;
+    }
+    
+    .comentarios-slider button {
+        font-size: 28px;
+        padding: 5px;
+    }
+    
+    .cliente-foto {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .comentario-texto p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .bloque-aniversario {
+        padding: 30px 12px;
+        margin: 20px 8px;
+        border-left: 4px solid #ff7aa8;
+        border-right: 4px solid #ff7aa8;
+    }
+    
+    .bloque-aniversario .banner-texto h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .bloque-aniversario .banner-texto p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    .bloque-aniversario .banner-imagen img,
+    .card.bloque img {
+        width: 150px;
+    }
+    
+    .conocenos-header {
+        margin: 25px 8px 12px;
+        gap: 12px;
+    }
+    
+    .conocenos-header .logo-placeholder {
+        font-size: 20px;
+        padding: 12px 15px;
+    }
+    
+    .conocenos-header h1 {
+        font-size: 20px;
+    }
+    
+    .conocenos-header .badge {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+    
+    .card.bloque {
+        margin: 20px 8px;
+        padding: 15px;
+    }
+    
+    .card.bloque h2 {
+        font-size: 20px;
+        margin: 12px 0 8px;
+    }
+    
+    .card.bloque p {
+        font-size: 14px;
+    }
+    
+    .conocenos .lead {
+        margin: 0 8px 25px;
+        padding: 15px 18px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .valores {
+        gap: 10px;
+    }
+    
+    .valor .icon {
+        font-size: 20px;
+    }
+    
+    .valor .texto h3 {
+        font-size: 15px;
+    }
+    
+    .valor .texto p {
+        font-size: 12px;
+    }
+    
+    .comentarios {
+        padding: 30px 10px;
+    }
+    
+    .comentarios h2 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+    
+    .comentarios-slider {
+        gap: 8px;
+        flex-direction: column;
+    }
+    
+    .comentarios-container {
+        max-width: 100%;
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .comentario {
+        min-width: 250px;
+        padding: 15px;
+        margin: 0 5px;
+    }
+    
+    .comentarios-slider button {
+        font-size: 24px;
+        padding: 8px 12px;
+        background-color: rgba(233, 30, 99, 0.1);
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cliente-foto {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 12px;
+    }
+    
+    .comentario-texto p {
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+    
+    .comentario-texto h4 {
+        font-size: 0.95em;
+    }
+    
+    .comentario:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .bloque-aniversario {
+        padding: 25px 10px;
+        margin: 15px 5px;
+    }
+    
+    .bloque-aniversario .banner-texto h2 {
+        font-size: 24px;
+    }
+    
+    .bloque-aniversario .banner-texto p {
+        font-size: 14px;
+    }
+    
+    .conocenos-header {
+        margin: 20px 5px 10px;
+    }
+    
+    .conocenos-header .logo-placeholder {
+        font-size: 18px;
+        padding: 10px 12px;
+    }
+    
+    .conocenos-header h1 {
+        font-size: 18px;
+    }
+    
+    .card.bloque {
+        margin: 15px 5px;
+        padding: 12px;
+    }
+    
+    .card.bloque h2 {
+        font-size: 18px;
+    }
+    
+    .card.bloque p {
+        font-size: 13px;
+    }
+    
+    .conocenos .lead {
+        margin: 0 5px 20px;
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    .comentarios {
+        padding: 25px 8px;
+    }
+    
+    .comentarios h2 {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+    
+    .comentario {
+        min-width: 220px;
+        padding: 12px;
+    }
+    
+    .cliente-foto {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+    
+    .comentario-texto p {
+        font-size: 0.8em;
+    }
+    
+    .comentario-texto h4 {
+        font-size: 0.9em;
+    }
+    
+    .comentarios-slider button {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bloque-aniversario {
+        padding: 60px 40px;
+        max-width: 1100px;
+    }
+    
+    .conocenos-header {
+        max-width: 1100px;
+    }
+    
+    .card.bloque {
+        max-width: 1100px;
+        padding: 30px;
+    }
+    
+    .conocenos .lead {
+        max-width: 1000px;
+        padding: 25px 30px;
+        font-size: 18px;
+    }
+    
+    .comentarios {
+        padding: 60px 40px;
+    }
+    
+    .comentarios-container {
+        max-width: 1200px;
+        gap: 25px;
+    }
+    
+    .comentario {
+        min-width: 320px;
+        padding: 25px;
+    }
+    
+    .cliente-foto {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .comentario:hover {
+        transform: none;
+    }
+    
+    .comentarios-slider button:hover {
+        color: #e91e63;
+    }
+    
+    .comentarios-slider button:active {
+        color: #ff69b4;
+        transform: scale(0.95);
+    }
 }

@@ -1,4 +1,4 @@
-/* Estilos base del header del blog */
+
 .blog-header {
     text-align: center;
     margin: 40px 20px 60px 20px;
@@ -22,7 +22,6 @@
     font-weight: 500;
 }
 
-/* Estilos del bloque de noticias */
 .bloque-noticia {
     display: flex;
     align-items: flex-start;
@@ -34,7 +33,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    gap: 15px; /* Mejor espaciado entre elementos */
+    gap: 15px; 
 }
 
 .bloque-noticia:hover {
@@ -42,7 +41,7 @@
     box-shadow: 0 8px 15px rgba(0,0,0,0.15);
 }
 
-/* Contenedor para múltiples imágenes */
+
 .bloque-noticia {
     flex-wrap: wrap;
 }
@@ -52,10 +51,10 @@
     height: 120px;
     object-fit: cover;
     border-radius: 10px;
-    flex-shrink: 0; /* Evita que se compriman demasiado */
+    flex-shrink: 0;
 }
 
-/* Cuando hay múltiples imágenes, las organizamos mejor */
+
 .bloque-noticia:has(.imagen-noticia:nth-child(2)) .imagen-noticia {
     width: 100px;
     height: 100px;
@@ -64,7 +63,7 @@
 
 .contenido {
     flex: 1;
-    min-width: 0; /* Permite que el texto se ajuste correctamente */
+    min-width: 0; 
 }
 
 .contenido h2 {
@@ -82,7 +81,7 @@
     text-align: justify;
 }
 
-/* Botón ver más */
+
 .btn-ver-mas {
     display: inline-block;
     margin-top: 10px;
@@ -104,9 +103,6 @@
     box-shadow: 0 4px 8px rgba(233, 30, 99, 0.3);
 }
 
-/* RESPONSIVE DESIGN */
-
-/* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
     .blog-header {
         margin: 30px 15px 50px 15px;
@@ -128,7 +124,6 @@
     }
 }
 
-/* Tablets pequeñas (600px - 768px) */
 @media (max-width: 768px) {
     .blog-header h1 {
         font-size: 2rem;
@@ -153,7 +148,6 @@
     }
 }
 
-/* Móviles grandes (480px - 600px) */
 @media (max-width: 600px) {
     .blog-header {
         margin: 20px 10px 40px 10px;
@@ -176,7 +170,6 @@
         gap: 15px;
     }
     
-    /* Contenedor de imágenes en móvil */
     .imagenes-container {
         display: flex;
         flex-wrap: wrap;
@@ -190,7 +183,6 @@
         margin: 0;
     }
     
-    /* Si hay una sola imagen, que ocupe más espacio */
     .bloque-noticia:has(.imagen-noticia:only-child) .imagen-noticia {
         width: 100%;
         height: 200px;
@@ -217,7 +209,6 @@
     }
 }
 
-/* Móviles muy pequeños (hasta 480px) */
 @media (max-width: 480px) {
     .blog-header h1 {
         font-size: 1.6rem;
@@ -246,7 +237,6 @@
     }
 }
 
-/* Mejoras adicionales para accesibilidad y UX */
 @media (prefers-reduced-motion: reduce) {
     .bloque-noticia {
         transition: none;

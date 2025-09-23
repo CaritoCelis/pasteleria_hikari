@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/usuario/estilos/styles.css">
     <link rel="stylesheet" href="/usuario/estilos/contacto.css">
-    
 </head>
 <body>
     <header>
@@ -34,36 +33,41 @@
                 <a href="/usuario/paginas/carrito.html" aria-label="Carrito de compras">🛒 (0)</a>
             </div>
         </div>
-    </header>
+    </header>   
+    
     <main class="contacto-container">
-    <h1>Contáctanos</h1>
-    <p class="intro">¿Tienes dudas, pedidos especiales o comentarios? Escríbenos y te responderemos lo antes posible.</p>
-    <form id="form-contacto">
-        <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required>
+        <h1>Contáctanos</h1>
+        <p class="intro">¿Tienes dudas, pedidos especiales o comentarios? Escríbenos y te responderemos lo antes posible.</p>
+        <form id="form-contacto">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="info-extra">
+            <h2>📍 Nuestra tienda</h2>
+            <p>Av. Pastelillo 860, Santiago, Chile</p>
+            <p>Tel: +56 9 1234 5678</p>
+            <p>Email: contacto@pasteleriahikari.cl</p>
         </div>
-        <div class="form-group">
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" required>
-        </div>
-        <div class="form-group">
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" rows="5" required></textarea>
-        </div>
-        <button type="submit">Enviar</button>
-    </form>
-    <div class="info-extra">
-        <h2>📍 Nuestra tienda</h2>
-        <p>Av. Pastelillo 860, Santiago, Chile</p>
-        <p>Tel: +56 9 1234 5678</p>
-        <p>Email: contacto@pasteleriahikari.cl</p>
-    </div>
     </main>
+
     <footer>
         <div class="footer-links">
-            <p><a href="index.html">Inicio</a> | <a href="/usuario/paginas/productos.html">Productos</a> | 
-            <a href="/usuario/paginas/nosotros.html">Nosotros</a></p>
+            <p>
+                <a href="index.html">Inicio</a> | 
+                <a href="/usuario/paginas/productos.html">Productos</a> | 
+                <a href="/usuario/paginas/nosotros.html">Nosotros</a>
+            </p>
         </div>
         <div class="social-icons">
             <i class="bi bi-facebook"></i>
@@ -71,18 +75,11 @@
             <i class="bi bi-twitter-x"></i>
             <i class="bi bi-youtube"></i>
         </div>
-        <div class="newsletter">
-            <p>Suscríbete a nuestro boletín:</p>
-            <input type="email" placeholder="Ingresa tu correo">
-            <button>Suscribirse</button>
-        </div>
+    
         <p>© 2025 Pastelería Hikari - Todos los derechos reservados 🍰</p>
     </footer>
-    <script src="../JS/contacto.JS"></script>
+
+    <script src="../JS/contacto.js"></script>
     <script src="../JS/responsividad.js"></script>
 </body>
 </html>
-
-
-
-
