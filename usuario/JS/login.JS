@@ -3,30 +3,55 @@ document.addEventListener("DOMContentLoaded", () => {
     const mensajeDiv = document.getElementById("mensaje");
 
     form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    mensajeDiv.innerHTML = "";
-    mensajeDiv.className = "mensaje";
+        e.preventDefault();
+        mensajeDiv.innerHTML = "";
+        mensajeDiv.className = "mensaje";
 
-    const correo = document.getElementById("correo").value.trim();
-    const password = document.getElementById("password").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+        // -------------------------------------------
+        // VALIDACIONES BÁSICAS
+        // -------------------------------------------
 
-    const usuario = usuarios.find(u => u.correo === correo && u.password === password);
+        if (correo === "" || password === "") {
+            mensajeDiv.classList.add("error");
+            mensajeDiv.innerHTML = "⚠️ Todos los campos son obligatorios.";
+            return;
+        }
 
-    if (usuario) {
-        mensajeDiv.classList.add("exito");
-        mensajeDiv.innerHTML = `<p>✅ Bienvenido, ${usuario.nombre} ${usuario.apellido}</p>`;
+        if (!correo.includes("@") || !correo.includes(".")) {
+            mensajeDiv.classList.add("error");
+            mensajeDiv.innerHTML = "⚠️ Ingresa un correo válido.";
+            return;
+        }
 
+        // -------------------------------------------
+        // VERIFICAR USUARIO REGISTRADO
+        // -------------------------------------------
+        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        const usuario = usuarios.find(
+            (u) => u.correo === correo && u.password === password
+        );
+
+        if (!usuario) {
+            mensajeDiv.classList.add("error");
+            mensajeDiv.innerHTML = "❌ Correo o contraseña incorrectos.";
+            return;
+        }
+
+        // -------------------------------------------
+        // LOGIN EXITOSO
+        // -------------------------------------------
         localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
 
-        setTimeout(() => {
-        window.location.href = "/index.html";
-        }, 1500);
+        mensajeDiv.classList.add("exito");
+        mensajeDiv.innerHTML = `✔ Bienvenido, ${usuario.nombre}`;
 
-    } else {
-        mensajeDiv.classList.add("error");
-        mensajeDiv.innerHTML = `<p>❌ Correo o contraseña incorrectos.</p>`;
-    }
+        // Redirige después de 1.5 segundos
+        setTimeout(() => {
+            window.location.href = "/index.html";
+        }, 1500);
     });
 });

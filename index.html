@@ -32,13 +32,39 @@
                     <li><a href="/usuario/paginas/contacto.html">Contacto</a></li>
                 </ul>
             </div>
+            
+
+
+            <!-- ACCIONES / LOGIN / PERFIL -->
             <div class="acciones">
-                <a href="/usuario/paginas/login.html">Iniciar sesión</a> | 
-                <a href="/usuario/paginas/registro.html">Registro</a>
-                <a href="/usuario/paginas/carrito.html" aria-label="Carrito de compras">🛒 (0)</a>
+
+                <!-- Mostrar si NO hay usuario logueado -->
+                <a id="btnLogin" href="/usuario/paginas/login.html">Iniciar sesión</a> | 
+                <a id="btnRegistro" href="/usuario/paginas/registro.html">Registro</a>
+
+                <!-- Mostrar si hay usuario logueado -->
+                <div id="perfilUsuario" style="display:none; align-items:center; gap:10px;">
+                    <span>Hola, <strong id="nombreUsuario"></strong></span>
+                    <button id="btnLogout" style="
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        border: none;
+                        background: #f06292;
+                        color: white;
+                        cursor: pointer;
+                    ">Cerrar sesión</button>
+                </div>
+
+                <!-- Carrito -->
+                <a id="carritoIcon" href="/usuario/paginas/carrito.html" aria-label="Carrito de compras">🛒 (0)</a>
             </div>
         </div>
     </header>
+
+
+
+
+
     <div class="banner">
         <img src="img/fondo_5.jpg" alt="Banner Pastelería Hikari">
         <div class="banner-texto">  
