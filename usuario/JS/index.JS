@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const perfilUsuario = document.getElementById("perfilUsuario");
     const nombreUsuarioSpan = document.getElementById("nombreUsuario");
     const btnLogout = document.getElementById("btnLogout");
+    const carritoIcon = document.getElementById("carritoIcon");
 
     if (usuarioActivo) {
         // SI HAY USUARIO LOGUEADO
@@ -32,6 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+      // ================================================
+    //   ACTUALIZAR CONTADOR DEL CARRITO EN EL HEADER
+    // ================================================
+    function actualizarCarritoHeader() {
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const total = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+
+        if (carritoIcon) {
+            carritoIcon.textContent = `🛒 (${total})`;
+        }
+    }
+    actualizarCarritoHeader();
+
 
     // ================================================
     //     PRODUCTOS Y AGREGAR AL CARRITO
@@ -40,25 +54,37 @@ document.addEventListener("DOMContentLoaded", () => {
         chocolate: { nombre: "Torta Cuadrada de Chocolate", precio: 45000 },
         vainilla: { nombre: "Torta Circular de Vainilla", precio: 40000 },
         cumpleaños: { nombre: "Torta Especial de Cumpleaños", precio: 55000 },
-        naranja: { nombre: "Torta de Naranja sin Azúcar", precio: 48000 },
-        manjar: { nombre: "Torta Circular de Manjar", precio: 48000 },
-        vegana: { nombre: "Torta Vegana de Chocolate", precio: 50000 },
-        galletas: { nombre: "Galletas Veganas de Avena", precio: 4500 }
+        galletas: { nombre: "Galletas Veganas de Avena", precio: 4500 },
+        cheesecake: { nombre: "Cheesecake sin Azúcar", precio: 47000 },
+        cuadrada: { nombre: "Torta Cuadrada de Frutas", precio: 50000 },
+        boda: { nombre: "Torta Especial de Boda", precio: 60000 },
+        tiramisu: { nombre: "Tiramisú Clásico", precio: 5500 },
+        "sin-gluten": { nombre: "Pan sin Gluten", precio: 3500 },
+        brownie: { nombre: "Brownie sin Gluten", precio: 4000 },
+        empanada: { nombre: "Empanada de Manzana", precio: 3000 }
     };
 
+      // ================================================
+    //     BOTONES "AÑADIR AL CARRITO"
+    // ================================================
     document.querySelectorAll(".grid-productos .producto").forEach(productoEl => {
         const btn = productoEl.querySelector("button");
-        const detalleLink = productoEl.querySelector("a.detalle").getAttribute("href");
+        const detalleLink = productoEl.querySelector("a.detalle");
 
-        const params = new URLSearchParams(detalleLink.split("?")[1]);
+        if (!btn || !detalleLink) return;
+
+        const params = new URLSearchParams(detalleLink.href.split("?")[1]);
         const productoKey = params.get("producto");
 
         btn.addEventListener("click", () => {
+            if (!productosData[productoKey]) {
+                console.error("Producto no encontrado: ", productoKey);
+                return;
+            }
+
             let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-            const index = carrito.findIndex(
-                p => p.nombre === productosData[productoKey].nombre
-            );
+            const index = carrito.findIndex(p => p.nombre === productosData[productoKey].nombre);
 
             if (index >= 0) {
                 carrito[index].cantidad += 1;
@@ -71,6 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarCarritoHeader();
+
             alert("Producto agregado al carrito ✅");
         });
     });
