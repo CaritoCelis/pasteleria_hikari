@@ -31,13 +31,40 @@
                     <li><a href="/usuario/paginas/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="acciones">
-                <a href="/usuario/paginas/login.html">Iniciar sesión</a> | 
+
+            
+
+<!-- LOGIN / PERFIL -->
+        <div class="acciones">
+
+            <span id="noLogueado">
+                <a href="/usuario/paginas/login.html">Iniciar sesión</a> |
                 <a href="/usuario/paginas/registro.html">Registro</a>
-                <a href="/usuario/paginas/carrito.html" aria-label="Carrito de compras">🛒 (0)</a>
+            </span>
+
+            <div id="perfilUsuario" style="display:none">
+                <span>Hola, <strong id="nombreUsuario"></strong></span>
+                <button id="logoutBtn" class="boton-cerrar-sesion">
+                    Cerrar sesión
+                </button>
             </div>
+
+            <a id="carritoIcon" href="/usuario/paginas/carrito.html">🛒 (0)</a>
         </div>
-    </header>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="productos-titulo">
         <h2>🍰 Todos nuestros productos</h2>
         <p>Descubre todas nuestras tortas, cupcakes y postres.</p>
@@ -263,23 +290,4 @@
     <script src="/usuario/JS/productos.js"></script>
     <script src="../JS/responsividad.js"></script>
 </body>
-<script>
-    document.getElementById("categoria").addEventListener("change", function() {
-        const seleccion = this.value;
-        const productos = document.querySelectorAll(".producto");
-
-        productos.forEach(producto => {
-            if (seleccion === "todos") {
-                producto.style.display = "block";
-            } else {
-                if (producto.classList.contains(seleccion)) {
-                    producto.style.display = "block";
-                } else {
-                    producto.style.display = "none";
-                }
-            }
-        });
-    });
-    
-</script>
 </html>
